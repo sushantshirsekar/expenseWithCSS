@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container ">
+        <div class="header">
+            <h3>Expense Tracker</h3>
+        </div><br><br>
+
+        <form onsubmit="getDetails(event)">
+            <div class="align-items-center">
+                <label for="amnt" class="form-label">Amount: </label>
+                <input type="number" name="amount" id="amnt" required>
+            </div><br>
+            <div class="align-items-center">
+                <label for="desc" class="form-label">Spent ON: </label>
+                <input type="Text" name="description" id="desc" required>
+            </div><br>
+            <div>
+                <label for="catId">Category:</label>
+                <select name="category" id="catId">
+                    <option value="No category selected">Select</option>
+                    <option value="fuel">Fuel</option>
+                    <option value="ration">Ration</option>
+                    <option value="monthly-expense">Monthly-Expense</option>
+                    <option value="others">Others</option>
+                </select>
+            </div><br>
+            <button class="btn">Submit</button>
+        </form>
+        
+    </div>
+    <br>
+    <br>
+    <div class="container2">
+        <div class="header2">
+            <h3>Expense</h3>
+        </div>
+        <div >
+            <h4>List of Expenses</h4>
+            <ul id="parent">
+
+            </ul>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.0/axios.min.js"></script>
+
+
+</body>
+
+</html>
